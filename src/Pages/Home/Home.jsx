@@ -1,6 +1,8 @@
 
 // import { useLoaderData } from 'react-router-dom'
 import Cart from '../../Components/Cart/Cart';
+import Faq from '../../Components/Faq/Faq';
+import FeaturedFoods from '../../Components/FeaturedFoods/FeaturedFoods';
 import Slider from '../../Components/Slider/Slider';
 import { Helmet } from 'react-helmet';
 
@@ -19,11 +21,22 @@ function Home() {
                 <title>Home</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
+            {/* Slider */}
             <div className="mt-">
                 <Slider></Slider>
             </div>
+            {/* Design cart */}
             <div className='mt-6 mb-16'>
                 <Cart></Cart>
+            </div>
+            {/* Featured Foods */}
+            <div className='mt-16 mb-16'>
+                <FeaturedFoods></FeaturedFoods>
+            </div> 
+
+            {/* Faq */}
+            <div className='mt-16 mb-16'>
+                <Faq></Faq>
             </div>
 
 
