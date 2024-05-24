@@ -2,9 +2,8 @@
 import { createBrowserRouter } from "react-router-dom";
 // import About from "../Pages/About";
 
-// import NotFound from "../Pages/NotFound";
-// import AddPlace from "../Components/AddPlace";
-// import UpdatePlace from "../Components/UpdatePlace";
+import NotFound from "../Pages/NotFound/NotFound";
+import AddFood from "../Components/AddFood/AddFood";
 import Github from "../Pages/Login/GithubLogin";
 import EmailLogin from "../Pages/Login/EmailLogin";
 import GoogleLogin from '../Pages/Login/GoogleLogin'
@@ -16,6 +15,9 @@ import SignUp from '../Pages/SignUp';
 import Login from "../Pages/Login/Login";
 // import ContactUs from '../Pages/ContactUs';
 import Home from "../Pages/Home/Home";
+import ManageFoods from "../Components/ManageFoods/ManageFoods";
+import RequestFood from "../Components/RequestFood/RequestFood";
+
 // import MyList from "../Components/MyList";
 // import AllTouristSpot from "../Components/AllTouristSpot";
 // import SpotDetails from "../Components/SpotDetails";
@@ -28,7 +30,7 @@ const routes = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
-        // errorElement:<NotFound></NotFound>,
+        errorElement:<NotFound></NotFound>,
         children:[
            
             {
@@ -46,14 +48,18 @@ const routes = createBrowserRouter([
             //       path:'/allSpot',
             //       element:<AllTouristSpot></AllTouristSpot>
             //   },
-            //   {
-            //     path:'/AddPlace',
-            //     element:<AddPlace></AddPlace>
-            //   },
-            //   {
-            //     path:'/UpdatePlace',
-            //     element:<UpdatePlace></UpdatePlace>
-            //   },
+              {
+                path:'/AddFood',
+                element:<AddFood></AddFood>
+              },
+              {
+                path:'/manageFood',
+                element:<ManageFoods></ManageFoods>
+              },
+              {
+                path:'/requestFood',
+                element:<RequestFood></RequestFood>
+              },
             //   {
             //     path:'/myList/:email',
             //     element:<PrivetRoutes><MyList></MyList></PrivetRoutes>

@@ -35,7 +35,7 @@ const Slider = () => {
                             <h2 className='text-3xl font-bold lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p>
                                 Welcome to <span className='text-red-700'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
                             </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-red-600 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
                         </div>
@@ -50,7 +50,7 @@ const Slider = () => {
                             <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p>
                                 Welcome to <span className='text-red-700'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
                             </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-red-600 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
                         </div>
@@ -65,7 +65,7 @@ const Slider = () => {
                             <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p>
                                 Welcome to <span className='text-red-700'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
                             </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-red-600 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
                            
 

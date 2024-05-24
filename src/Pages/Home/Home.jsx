@@ -1,10 +1,16 @@
 
 // import { useLoaderData } from 'react-router-dom'
 import Cart from '../../Components/Cart/Cart';
+import Chef from '../../Components/Chef/Chef';
 import Faq from '../../Components/Faq/Faq';
 import FeaturedFoods from '../../Components/FeaturedFoods/FeaturedFoods';
 import Slider from '../../Components/Slider/Slider';
 import { Helmet } from 'react-helmet';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Gallery from '../../Components/Gallery/Gallery';
+
+AOS.init();
 
 
 
@@ -22,7 +28,7 @@ function Home() {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             {/* Slider */}
-            <div className="mt-">
+            <div className="lg:mt-4 mt-16">
                 <Slider></Slider>
             </div>
             {/* Design cart */}
@@ -37,6 +43,16 @@ function Home() {
             {/* Faq */}
             <div className='mt-16 mb-16'>
                 <Faq></Faq>
+            </div>
+
+            {/* Meet our shef */}
+            <div className='mt-16 mb-16'>
+                <Chef></Chef>
+            </div>
+
+            {/* gallery */}
+            <div className='mt-6 mb-6'>
+                <Gallery></Gallery>
             </div>
 
 
