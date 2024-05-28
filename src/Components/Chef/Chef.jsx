@@ -9,7 +9,14 @@ const Chef = () => {
     return (
 
         <div>
-        <h2 className='text-5xl font-bold text-center text-red-600 mt-12 mb-12'>Meet Our  Pro<span className="italic">F</span>essional  Che<span className="italic">F</span></h2>
+        <h2 className='text-5xl font-bold text-center text-red-600 mt-12 mb-4 font-lato'>Meet Our  Professional  Chef</h2>
+        <p className='text-center font-lato text-xl mb-12'>These chefs exemplify the pinnacle of culinary excellence, each bringing their unique vision and innovation <br /> to the  forefront of the gastronomic world. Their contributions continue to inspire <br /> and shape the future of fine dining globally.
+
+
+
+
+
+</p>
           <div className='lg:flex gap-4'>
             
             {/* chef1 */}

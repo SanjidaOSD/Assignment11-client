@@ -9,6 +9,8 @@ import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Gallery from '../../Components/Gallery/Gallery';
+import AboutUs from '../../Components/AboutUs/AboutUs';
+import Navbar from '../../LayOut/Navbar';
 
 AOS.init();
 
@@ -27,6 +29,7 @@ function Home() {
                 <title>Home</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
+            
             {/* Slider */}
             <div className="lg:mt-4 mt-16">
                 <Slider></Slider>
@@ -50,8 +53,14 @@ function Home() {
                 <Chef></Chef>
             </div>
 
+            {/* About us */}
+            <div className='mt-16 mb-52'>
+                <AboutUs></AboutUs>
+            </div>
+
             {/* gallery */}
-            <div className='mt-6 mb-6'>
+            <div className='mt-6 mb-2'>
+                <h1 className='text-center text-4xl font-bold text-orange-600 mt-6 mb-6'>Our Food Gallery</h1>
                 <Gallery></Gallery>
             </div>
 

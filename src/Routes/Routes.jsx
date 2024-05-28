@@ -17,6 +17,7 @@ import Login from "../Pages/Login/Login";
 import Home from "../Pages/Home/Home";
 import ManageFoods from "../Components/ManageFoods/ManageFoods";
 import RequestFood from "../Components/RequestFood/RequestFood";
+import AvailableFoods from "../Components/AvailableFoods/AvailableFoods";
 
 // import MyList from "../Components/MyList";
 // import AllTouristSpot from "../Components/AllTouristSpot";
@@ -51,6 +52,10 @@ const routes = createBrowserRouter([
               {
                 path:'/AddFood',
                 element:<AddFood></AddFood>
+              },
+              {
+                path:'/availableFood',
+                element:<AvailableFoods></AvailableFoods>
               },
               {
                 path:'/manageFood',

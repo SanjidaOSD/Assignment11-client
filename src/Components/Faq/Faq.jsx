@@ -8,7 +8,9 @@ const Faq = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img data-aos="fade-right" data-aos-duration="1000" src={faqFood} className="max-w-sm rounded-lg h-[400px]" />
                     <div data-aos="fade-left" data-aos-duration="1000">
+                    <h1 className='text-center font-bold text-orange-600 text-3xl font-lato '>FAQ</h1>
                         <div className="collapse collapse-arrow bg-base-200">
+                           
                             <input type="radio" name="my-accordion-2" defaultChecked />
                             <div className="collapse-title text-xl font-medium">
                                 What ingredients do you use in your dishes?                            </div>
