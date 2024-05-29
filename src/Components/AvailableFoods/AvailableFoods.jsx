@@ -26,12 +26,12 @@ const AvailableFood = () => {
             {
                 loader ?
                     <div>
-                        <span className="loading items-center justify-center ml-[200px] mt-[50px] md:ml-[550px] md:mt-[200px] loading-dots loading-lg"></span>
+                        <span className="loading items-center justify-center ml-[200px] mt-[50px] md:ml-[550px] md:mt-[200px] loading-bars loading-lg"></span>
                     </div>
                     :
 
                     <div>
-                        {/* <h1 className=' text-center text-5xl font-bold mt-6 mb-4'> Food:{allFoods.length}</h1> */}
+                        
                         <h1 className="text-center text-3xl font-bold text-orange-600 font-lato mb-4">Available Foods</h1>
                         <p className="text-center font-lato mb-8">At our restaurant, we take pride in showcasing an array of featured foods that <br /> highlight our commitment to quality and culinary innovation.</p>
                         <div className="grid md:grid-cols-3 gap-12">

@@ -1,4 +1,4 @@
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 import UseAuth from '../../Hook/UseAuth';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -42,28 +42,25 @@ const AddFood = () => {
             },
         };
 
-        // console.log(newFood);
-
-        // send data to the server
-
-        axios.post('http://localhost:5000/food', {
-
+        
+          try{
+            axios.post('http://localhost:5000/food', {
             newFood
         })
-            // .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.insertedId) {
-                    swal({
-                        title: "Good job!",
-                        text: "You clicked the button!",
-                        icon: "success",
-                        button: "Aww yiss!",
-                    });
+            Swal.fire({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success"
+              });
 
-                }
-            })
+        
+          }
+          catch(err){
+            console.log(err)
+            }
+          
     };
+
 
     return (
         <div>

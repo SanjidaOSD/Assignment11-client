@@ -43,7 +43,6 @@ const routes = createBrowserRouter([
 
       },
 
-
       {
         path: '/AddFood',
         element: <AddFood></AddFood>
@@ -51,7 +50,6 @@ const routes = createBrowserRouter([
       {
         path: '/availableFood',
         element: <AvailableFoods></AvailableFoods>,
-        // loader: fetch ("http://localhost:5000/food")
       },
       {
         path: '/manageFood',
