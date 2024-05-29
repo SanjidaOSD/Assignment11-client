@@ -10,8 +10,6 @@ import 'swiper/css/navigation';
 import { GoTriangleRight } from "react-icons/go";
 
 
-
-
 // import required modules
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';

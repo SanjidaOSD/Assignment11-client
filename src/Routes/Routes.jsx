@@ -18,6 +18,8 @@ import Home from "../Pages/Home/Home";
 import ManageFoods from "../Components/ManageFoods/ManageFoods";
 import RequestFood from "../Components/RequestFood/RequestFood";
 import AvailableFoods from "../Components/AvailableFoods/AvailableFoods";
+import FoodDetails from "../Components/FoodDetails/FoodDetails";
+import PrivetRoutes from '../../src/Routes/PrivetRoutes';
 
 // import MyList from "../Components/MyList";
 // import AllTouristSpot from "../Components/AllTouristSpot";
@@ -28,87 +30,67 @@ import AvailableFoods from "../Components/AvailableFoods/AvailableFoods";
 
 
 const routes = createBrowserRouter([
-    {
-        path:'/',
-        element:<Root></Root>,
-        errorElement:<NotFound></NotFound>,
-        children:[
-           
-            {
-                path: "/",
-                element: <Home></Home>,  
-                // loader: () => fetch('https://m56-tourist-management-website-server.vercel.app/place')
-              },
-            //   {
-            //     path:'/country/:country',
-            //     element:<CountryDetails></CountryDetails>,
-            //     loader:({params}) => fetch(`https://m56-tourist-management-website-server.vercel.app/country/${params.country}`)
+  {
+    path: '/',
+    element: <Root></Root>,
+    errorElement: <NotFound></NotFound>,
+    children: [
 
-            //   },
-            //   {
-            //       path:'/allSpot',
-            //       element:<AllTouristSpot></AllTouristSpot>
-            //   },
-              {
-                path:'/AddFood',
-                element:<AddFood></AddFood>
-              },
-              {
-                path:'/availableFood',
-                element:<AvailableFoods></AvailableFoods>
-              },
-              {
-                path:'/manageFood',
-                element:<ManageFoods></ManageFoods>
-              },
-              {
-                path:'/requestFood',
-                element:<RequestFood></RequestFood>
-              },
-            //   {
-            //     path:'/myList/:email',
-            //     element:<PrivetRoutes><MyList></MyList></PrivetRoutes>
-            //   },
-            //   {
-            //     path:'/spotDetails/:_id',
-            //     element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
-            //     loader: ({params}) => fetch(`https://m56-tourist-management-website-server.vercel.app/place/${params._id}`)
-                 
-                    
-                
-            //   },
-           
-           
-           
-            // {
-            //    path:'/contact',
-            //    element:<PrivetRoutes><ContactUs></ContactUs></PrivetRoutes>
-            // },
-           
-            {
-                path:'/login',
-                element:<Login></Login>
-            },
-            {
-               path:'/emailLogin',
-               element:<EmailLogin></EmailLogin>
-            },
-            {
-                path:'/githubLogin',
-                element:<Github></Github>
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/food')
 
-            },
-            {
-                path:'/googleLogin',
-                element:<GoogleLogin></GoogleLogin>
+      },
 
-            },
-            {
-                path:'/signUp',
-                element:<SignUp></SignUp>,
-            },
-          
-        ]
-    }
+
+      {
+        path: '/AddFood',
+        element: <AddFood></AddFood>
+      },
+      {
+        path: '/availableFood',
+        element: <AvailableFoods></AvailableFoods>,
+        // loader: fetch ("http://localhost:5000/food")
+      },
+      {
+        path: '/manageFood',
+        element: <ManageFoods></ManageFoods>
+      },
+      {
+        path: '/requestFood',
+        element: <RequestFood></RequestFood>
+      },
+      {
+        path: '/details/:id',
+        element: <PrivetRoutes><FoodDetails></FoodDetails></PrivetRoutes>,
+        loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+      },
+
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/emailLogin',
+        element: <EmailLogin></EmailLogin>
+      },
+      {
+        path: '/githubLogin',
+        element: <Github></Github>
+
+      },
+      {
+        path: '/googleLogin',
+        element: <GoogleLogin></GoogleLogin>
+
+      },
+      {
+        path: '/signUp',
+        element: <SignUp></SignUp>,
+      },
+
+    ]
+  }
 ]);
 export default routes

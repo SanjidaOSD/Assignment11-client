@@ -20,7 +20,7 @@ const NotFound = () => {
                 NOT FOUND
             </h2> */}
                 <img src={error} alt="" className="h-[50%] w-[50%] items-center justify-center ml-28 lg:ml-64" />
-                <Link to='/'><button className="btn bg-orange-500 lg:mt-[600px]">Back to Home</button>
+                <Link to='/'><button className="btn bg-orange-500 lg:mt-[500px]">Back to Home</button>
                 </Link>
             </div>
 

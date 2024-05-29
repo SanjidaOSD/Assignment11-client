@@ -7,7 +7,7 @@ const AboutUs = () => {
             <div className="hero">
                 <div className="hero-content relative flex-col lg:flex-row">
                     <img src={img1} className='lg:w-[50%] rounded-lg shadow-2xl' />
-                    <img src={img2} className='lg:w-[30%] w-[50%] absolute lg:left-96 lg:lg:top-[60%] border-8 border-orange-500 rounded-lg shadow-2xl' />
+                    <img src={img2} className='lg:w-[30%] w-[50%] lg:h-[50%] absolute lg:left-96 lg:lg:top-[60%] border-8 border-orange-500 rounded-lg shadow-2xl' />
                     <div>
                         <div className='lg:ml-44 lg:mt-0 mt-28'>
                             <h1 className='text-orange-600 mb-6 font-bold text-xl'>About Us</h1>
