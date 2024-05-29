@@ -30,9 +30,10 @@ const Slider = () => {
                 </div>
                     <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-slate-700 rounded-xl'>
                         <div className='text-white space-y-5 lp-12 text-center justify-center'>
-                            <h2 className='text-3xl font-bold lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12 font-lato'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
-                                Welcome to <span className='text-red-700 font-lato text-4xl font-bold'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
-                            </p>
+                            <h2 className='text-3xl font-bold lg:mb-52 w-3/2'><span className='lg:text-6xl text-green-600 mb-12 font-lato font-extrabold'>The Food
+                                for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
+                                An innovative approach to helping people emerge from the cycle of poverty.<br />
+                                </p>
                                 <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
@@ -45,9 +46,10 @@ const Slider = () => {
                 </div>
                     <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-slate-600 rounded-xl'>
                         <div className='text-white space-y-5 lp-12 text-center justify-center'>
-                            <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p>
-                                Welcome to <span className='text-red-700 font-lato text-4xl font-bold'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
-                            </p>
+                            <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-green-600 mb-12 font-lato font-extrabold '>The Food
+                                for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
+                                An innovative approach to helping people emerge from the cycle of poverty.<br />
+                                </p>
                                 <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
@@ -60,12 +62,13 @@ const Slider = () => {
                 </div>
                     <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-slate-600 rounded-xl'>
                         <div className='text-white space-y-5 lp-12 text-center justify-center'>
-                            <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-red-600 mb-12'>FOOD WITH A PURPOSE!</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p>
-                                Welcome to <span className='text-red-700 font-lato text-4xl font-bold'>Tasty Treat</span>. <br /> Come for the taste, Stay for the experience. <br />
-                            </p>
+                            <h2 className='text-3xl font-bold text-center justify-center lg:mb-52 w-3/2'><span className='lg:text-6xl text-orange-600 mb-12 font-lato font-extrabold'>The Food
+                                for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
+                                An innovative approach to helping people emerge from the cycle of poverty.<br />
+                                </p>
                                 <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
-                           
+
 
                         </div>
                     </div>

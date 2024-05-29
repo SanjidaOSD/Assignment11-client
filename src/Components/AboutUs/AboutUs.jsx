@@ -10,12 +10,12 @@ const AboutUs = () => {
                     <img src={img2} className='lg:w-[30%] w-[50%] lg:h-[50%] absolute lg:left-96 lg:lg:top-[60%] border-8 border-orange-500 rounded-lg shadow-2xl' />
                     <div>
                         <div className='lg:ml-44 lg:mt-0 mt-28'>
-                            <h1 className='text-orange-600 mb-6 font-bold text-xl'>About Us</h1>
-                            <h1 className="text-5xl font-bold">Organic and Fresh Foods For Your Health</h1>
-                            <p className="py-6">Our foods are more than just dishes; they are a representation of our culinary philosophy and our passion for delivering exceptional meals. Each plate is thoughtfully crafted to ensure that every visit to our restaurant is a celebration of fine food and extraordinary flavors.
+                            <h1 className='text-orange-600 mb-6 font-bold text-xl'>Most Needed</h1>
+                            <h1 className="text-5xl font-bold">Eid Qurbani / Udhiya</h1>
+                            <p className="py-6">Provide meat to the less fortunate through your annual Eid Qurbani/ Udhiya.
 
                             </p>
-                            <Link to='/availableFood'><button className="btn bg-orange-400">See more</button></Link>
+                            <Link to='/AddFood'><button className="btn bg-orange-400">Donate now</button></Link>
                         </div>
                     </div>
                 </div>

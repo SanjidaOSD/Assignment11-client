@@ -25,7 +25,7 @@ const Manage = ({ manageFood, idx, handleDelete }) => {
                             <h1>{foodStatus}</h1>
                         </div>
                         <div className="col-span-2 flex justify-center items-center border-b border-s py-4">
-                            <h1>{additionalNotes}</h1>
+                            <h1>{additionalNotes.substring(0,50)}.....</h1>
                         </div>
                         <div className="col-span-3 flex justify-center items-center border-b border-s py-4 gap-5 flex-wrap">
                             <Link to={`/updateSpot/${_id}`}><button className='px-3 py-1 bg-green-500 font-semibold text-white rounded-md'>Update</button></Link>
