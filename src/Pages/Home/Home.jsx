@@ -12,6 +12,7 @@ import Gallery from '../../Components/Gallery/Gallery';
 import AboutUs from '../../Components/AboutUs/AboutUs';
 import Navbar from '../../LayOut/Navbar';
 import { useLoaderData } from 'react-router-dom';
+import { useState } from 'react';
 
 AOS.init();
 

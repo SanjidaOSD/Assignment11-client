@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../../Hook/UseAuth";
 import Manage from "../Manage/Manage";
+import { useLoaderData } from "react-router-dom";
 
 
 const ManageFoods = () => {
+    const foods = useLoaderData();
     const { user } = UseAuth();
     const [manageFoods, setManageFoods] = useState([]);
     const [loader, setLoader] = useState(true);
+    const [food, setFood] = useState();
+    const [deleteCount, setDeleteCount] = useState(1);
+
 
     const Manages = async () => {
         await fetch(`http://localhost:5000/food?email=${user?.email}`)
@@ -19,7 +24,7 @@ const ManageFoods = () => {
     useEffect(() => {
         Manages();
 
-    }, [user])
+    }, [user,deleteCount])
 
 
     return (
@@ -30,13 +35,6 @@ const ManageFoods = () => {
                         <span className="loading items-center justify-center ml-[200px] mt-[50px] md:ml-[550px] md:mt-[200px]  loading-bars loading-lg"></span>
                     </div>
                     :
-                    //  <div>
-                    //     <h1>manage my donate food {manageFoods.length}</h1>
-                    //      {
-                    //         manageFoods.map(manageFood => <Manage key={manageFood._id} manageFood={manageFood}></Manage>)
-                    //      }
-                    //  </div>
-
 
                     <div>
                         <div className="grid grid-cols-12 bg-orange-500 font-bold border-x mt-12">
@@ -50,10 +48,10 @@ const ManageFoods = () => {
                                 <h1>Dish Name</h1>
                             </div>
                             <div className="col-span-2 flex justify-center items-center border-y border-s py-2">
-                                <h1>Status</h1>
+                                <h1>Pickup Location</h1>
                             </div>
                             <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
-                                <h1>Aditional note</h1>
+                                <h1>Expire Date</h1>
                             </div>
                             <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
                                 <h1>Actions</h1>
@@ -62,7 +60,16 @@ const ManageFoods = () => {
                         {
                             // myLists.map((myList, idx) => <Manage key={myList._id} myList={myList} idx={idx} handleDelete={handleDelete}></Manage>)
 
-                            manageFoods.map((manageFood, idx) => <Manage key={manageFood._id} manageFood={manageFood} idx={idx}></Manage>)
+                            manageFoods.map((manageFood, idx) =>
+                                <Manage key={manageFood._id}
+                                    manageFood={manageFood}
+                                    idx={idx}
+                                    food={food}
+                                    Manage ={Manage}
+                                    setFood={setFood}
+                                    deleteCount={deleteCount}
+                                    setDeleteCount= {setDeleteCount}
+                                ></Manage>)
                         }
                     </div>
 
