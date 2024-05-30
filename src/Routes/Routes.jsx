@@ -20,6 +20,7 @@ import RequestFood from "../Components/RequestFood/RequestFood";
 import AvailableFoods from "../Components/AvailableFoods/AvailableFoods";
 import FoodDetails from "../Components/FoodDetails/FoodDetails";
 import PrivetRoutes from '../../src/Routes/PrivetRoutes';
+import Update from "../Components/Udate/Update";
 
 // import MyList from "../Components/MyList";
 // import AllTouristSpot from "../Components/AllTouristSpot";
@@ -58,6 +59,11 @@ const routes = createBrowserRouter([
       {
         path: '/requestFood',
         element: <RequestFood></RequestFood>
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
       },
       {
         path: '/details/:id',

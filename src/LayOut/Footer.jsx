@@ -48,7 +48,7 @@ const Footer = () => {
                 </nav>
             </footer>
             <hr />
-            <footer className="footer footer-center p-4 bg-orange-300 font-bold text-black">
+            <footer className="footer footer-center p-4 bg-green-200 font-bold text-black">
                 <aside>
                     <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
                 </aside>
