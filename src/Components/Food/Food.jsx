@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const Food = ({ foods }) => {
-    console.log(foods);
+    // console.log(foods);
 
     // Destructure the necessary properties from the foods object
     const {
