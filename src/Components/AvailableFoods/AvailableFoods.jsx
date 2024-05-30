@@ -33,7 +33,7 @@ const AvailableFood = () => {
                     <div>
                         
                         <h1 className="text-center text-3xl font-bold text-orange-600 font-lato mb-4">Available Foods</h1>
-                        <p className="text-center font-lato mb-8">At our restaurant, we take pride in showcasing an array of featured foods that <br /> highlight our commitment to quality and culinary innovation.</p>
+                        <p className="text-center font-lato mb-8">At our food donation center, we provide a diverse array of nutritious and delicious options to ensure that everyone has access to wholesome meals. <br /> Our offerings include fresh fruits and vegetables, such as crisp apples, juicy oranges, and vibrant leafy greens, <br /> all sourced from local farms. We also have pantry staples like rice, pasta,  and canned goods,  including beans, <br /> soups, and vegetables, which provide the foundation for many hearty meals.</p>
                         <div className="grid md:grid-cols-3 gap-12">
                             {
                                 allFoods.map(foods => <Food key={foods._id} foods={foods}></Food>)

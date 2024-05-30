@@ -21,7 +21,7 @@ const Food = ({ foods }) => {
 
     return (
         <div className="">
-            <div className="hero bg-base-200 rounded-lg mx-auto lg:h-[280px]">
+            <div className="hero bg-green-100 rounded-lg mx-auto lg:h-[280px]">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={foodImg}

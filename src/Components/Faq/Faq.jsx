@@ -1,10 +1,10 @@
-import faqFood from '../../assets/faq1.jpg'
+import faqFood from '../../assets/donate faq.jpg'
 
 
 const Faq = () => {
     return (
         <div>
-            <div className="hero p-2">
+            <div className="hero p-2 bg-red-100">
                 <div className="hero-content flex-col lg:flex-row">
                     <img data-aos="fade-right" data-aos-duration="1000" src={faqFood} className="max-w-sm rounded-lg h-[400px]" />
                     <div data-aos="fade-left" data-aos-duration="1000">

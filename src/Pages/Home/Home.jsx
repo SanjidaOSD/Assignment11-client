@@ -44,7 +44,8 @@ function Home() {
             <div className='mt-16 mb-16'>
                 {/* <FeaturedFoods></FeaturedFoods> */}
                 <h1 className="text-center text-4xl font-bold text-red-600">Featured Foods</h1>
-            <p className="text-xl font-lato text-center mt-4 mb-6">At our restaurant, we take pride in showcasing an array of featured foods that <br /> highlight our commitment to quality and culinary innovation.</p>
+                <p className="text-xl font-lato text-center mt-4 mb-6">Our offerings include fresh fruits and vegetables, such as crisp apples, juicy oranges, <br /> and vibrant leafy greens,
+                    all sourced from local farms.</p>
                 <div className='grid lg:grid-cols-3 gap-4'>
                     {
                         foods.slice(0, 6).map(food => <FeaturedFoods
@@ -73,14 +74,14 @@ function Home() {
 
             {/* gallery */}
             <div className='mt-6 mb-2'>
-                <h1 className='text-center text-4xl font-bold text-orange-600 mt-6 mb-6'>Our Food Gallery</h1>
+                <h1 className='text-center text-4xl font-bold text-orange-600 mt-6 mb-6'>Here is All Donated Food</h1>
                 <Gallery></Gallery>
             </div>
 
 
-            
 
-            
+
+
             {/* <div>
                 <div className='mt-24 mb-16'>
                     <h3 className='text-center text-5xl font-bold '>Go Exotic Places</h3>

@@ -1,13 +1,13 @@
 import Swal from 'sweetalert2'
 import UseAuth from '../../Hook/UseAuth';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const AddFood = () => {
     const { user } = UseAuth() || {};
 
     console.log(user)
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleAddFood = async (event) => {
         event.preventDefault();
@@ -46,6 +46,7 @@ const AddFood = () => {
           try{
             axios.post('http://localhost:5000/food', {
             newFood
+
         })
             Swal.fire({
                 title: "Good job!",
@@ -53,9 +54,11 @@ const AddFood = () => {
                 icon: "success"
               });
 
-        
+              navigate('/availableFood')
+
           }
-          catch(err){
+
+        catch(err){
             console.log(err)
             }
           
@@ -69,7 +72,7 @@ const AddFood = () => {
                     <div className="text-center">
                         <h1 className="text-3xl text-orange-600 font-bold">Add Your Best Food</h1>
                     </div>
-                    <div className="card shrink-0 w-full shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full shadow-2xl bg-green-100">
                         <form onSubmit={handleAddFood} className="card-body">
                             <div className="md:flex md:gap-6">
                                 <div className="form-control md:w-1/2">
@@ -139,7 +142,8 @@ const AddFood = () => {
                                     <label className="label">
                                         <span className="label-text font-bold">User Image</span>
                                     </label>
-                                    <input type="text" name="userImage" placeholder="User Image URL" className="input input-bordered" />
+                                    <input type="text" name="userImage"
+                                    defaultValue={ user?.photoURL} placeholder="User Image URL" className="input input-bordered" />
                                 </div>
                                 <div className="form-control md:w-1/2">
                                     <label className="label">

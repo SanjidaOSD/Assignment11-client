@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 const FeaturedFoods = ({ food }) => {
     console.log(food)
 
-    // const [allFoods, setAllFoods] = useState([]);
-    // const [loader, setLoader] = useState(true);
 
     // const url = 'http://localhost:5000/food'
 
@@ -37,7 +35,7 @@ const FeaturedFoods = ({ food }) => {
     return (
         <div>
             <div className="">
-                <div className="hero bg-base-200 rounded-lg mx-auto lg:h-[260px]">
+                <div className="hero bg-green-100 rounded-lg mx-auto lg:h-[260px]">
                     <div className="hero-content flex-col lg:flex-row">
                         <img
                             src={foodImg}

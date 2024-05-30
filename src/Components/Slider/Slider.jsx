@@ -1,7 +1,7 @@
 
-import img1 from '../../assets/img2.jpg'
-import img3 from '../../assets/banner1.jpg'
-import img5 from '../../assets/banner3.jpg'
+import img1 from '../../assets/donate4.jpg'
+import img3 from '../../assets/donar.jpg'
+import img5 from '../../assets/donate3.jpg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -34,7 +34,7 @@ const Slider = () => {
                                 for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
                                 An innovative approach to helping people emerge from the cycle of poverty.<br />
                                 </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Donated Foods<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
                         </div>
@@ -50,7 +50,7 @@ const Slider = () => {
                                 for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
                                 An innovative approach to helping people emerge from the cycle of poverty.<br />
                                 </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Donated Foods<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
                         </div>
@@ -66,7 +66,7 @@ const Slider = () => {
                                 for People Story</span> <br /> <hr className='font-bold mt-4 justify-start'></hr> <br /><p className='font-lato'>
                                 An innovative approach to helping people emerge from the cycle of poverty.<br />
                                 </p>
-                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Explore More<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
+                                <Link to="/availableFood"><button className="btn btn-active bg-orange-500 mt-12">Donated Foods<GoTriangleRight className='font-bold text-3xl'></GoTriangleRight></button></Link>
                             </h2>
 
 

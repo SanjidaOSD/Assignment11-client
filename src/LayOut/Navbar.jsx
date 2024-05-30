@@ -3,7 +3,7 @@ import UseAuth from "../Hook/UseAuth";
 import { FcBusinesswoman } from "react-icons/fc";
 // import plane from '../assets/plane.png';
 import { useEffect, useState } from "react";
-import logo from '../assets/logo2.png'
+import logo from '../assets/donate logo2.png'
 
 
 
@@ -65,7 +65,7 @@ const Navbar = () => {
                     </div>
                     <div className=" mb-4">
                         <a className="btn btn-ghost lg:text-4xl flex lg:flex"><img src={logo} className="lg:h-[50px] h-[50px] w-[50px] lg:w-[70px] rounded-2xl" alt="" /> </a>
-                        <span className="text-green-700 lg:text-3xl text-xl lg:font-bold font-bold"><span className="text-red-700 text-4xl italic">T</span>asty<span className="text-red-700 text-4xl italic">T</span>reat</span>
+                        <span className="text-green-700 lg:text-3xl text-xl lg:font-bold font-bold"><span className="text-red-700 text-4xl italic">S</span>hare<span className="text-red-700 text-4xl">M</span>eals</span>
 
                     </div>
                 </div>
