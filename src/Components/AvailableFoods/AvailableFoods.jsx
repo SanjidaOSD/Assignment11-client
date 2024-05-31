@@ -9,25 +9,11 @@ const AvailableFood = () => {
     const [search, setSearch] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
 
-    // const fetchFoods = () => {
-    //     const url = `http://localhost:5000/food?sort=${sort}&search=${search}&page=${currentPage}`;
-
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setAllFoods(data);
-    //             setLoader(false);
-    //         })
-    //         .catch(error => {
-    //             console.error("Error fetching data: ", error);
-    //             setLoader(false);
-    //         });
-    // };
 
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/food?sort=${sort}&search=${search}&page=${currentPage}`);
+                const response = await fetch(`http://localhost:5000/food?sort=${sort}&search=${search}`);
                 const data = await response.json();
                 setAllFoods(data);
                 setLoader(false);

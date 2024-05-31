@@ -2,30 +2,44 @@ import { useEffect, useState } from "react";
 import UseAuth from "../../Hook/UseAuth";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 // import Request from "../Request/Request";
 
 
 const MyRequestFood = () => {
     const { user } = UseAuth()
-    const [requestFood, setRequestFood] = useState();
+    // const [requestFood, setRequestFood] = useState();
     const navigate = useNavigate();
+    const { data: foods = [],
+        isLoading,
+        refetch,
+        isError,
+        error } = useQuery({
+            queryFn: () => getData(),
+            queryKey: ['foods']
 
+        })
+    console.log(foods)
 
-    useEffect(() => {
-        getData()
-    }, [user, requestFood]);
+    // useEffect(() => {
+    //     getData()
+    // }, [user, requestFood]);
 
     const getData = async () => {
-        const data  = await axios(`http://localhost:5000/request?.email=${user?.email}`);
+        const data = await axios(`http://localhost:5000/request?.email=${user?.email}`
+        );
 
-        setRequestFood(data)
+        // setRequestFood(data)
         navigate('/availableFood')
+
+        return data
 
     }
 
-    console.log(requestFood)
-
-
+    if (isLoading) return <span className="loading items-center justify-center ml-[200px] mt-[50px] md:ml-[550px] md:mt-[200px] loading-bars loading-lg"></span>
+    if(isError || error) {
+        console.log(error)
+    }
     return (
         <div>
             {/* <h1>{requestFood.length}</h1> */}
