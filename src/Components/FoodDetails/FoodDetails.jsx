@@ -1,6 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import UseAuth from "../../Hook/UseAuth";
 import { IoLocationSharp } from "react-icons/io5";
+import axios from "axios";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const FoodDetails = () => {
@@ -38,7 +40,7 @@ const FoodDetails = () => {
         const userImage = user.photoURL;
         const foodImg = form.foodImg.value;
 
-        const newFood = {
+        const requestData = {
             name,
             email,
             foodName,
@@ -55,6 +57,13 @@ const FoodDetails = () => {
                 userImage: user?.photoURL,
             },
         };
+
+        try {
+            const { data } = await axios.post(`http://localhost:5000/request`, requestData)
+            console.log(data)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     return (
@@ -86,7 +95,7 @@ const FoodDetails = () => {
                                 <div className="modal-box w-11/12 max-w-5xl bg-orange-200">
 
                                     <h1 className="text-center text-2xl font-bold text-green-600">Your requested food details</h1>
-                                    
+
                                     <div className="modal-action justify-center mt-[1px]">
                                         <div method="dialog">
 
@@ -184,6 +193,8 @@ const FoodDetails = () => {
                                                     <button className="btn btn-ghost bg-orange-500 text-white">Request</button>
                                                 </div>
                                             </form>
+                                            <Link to='/availableFood'>                                            <button><FaArrowRightLong className="font-bold text-2xl"></FaArrowRightLong></button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

@@ -16,17 +16,15 @@ import Login from "../Pages/Login/Login";
 // import ContactUs from '../Pages/ContactUs';
 import Home from "../Pages/Home/Home";
 import ManageFoods from "../Components/ManageFoods/ManageFoods";
-import RequestFood from "../Components/RequestFood/RequestFood";
+// import RequestFood from "../Components/RequestFood/RequestFood";
 import AvailableFoods from "../Components/AvailableFoods/AvailableFoods";
 import FoodDetails from "../Components/FoodDetails/FoodDetails";
 import PrivetRoutes from '../../src/Routes/PrivetRoutes';
 import Update from "../Components/Udate/Update";
+import MyRequestFood from "../Components/MyRequestFood/MyRequestFood";
+import Request from "../Components/Request/Request";
 
-// import MyList from "../Components/MyList";
-// import AllTouristSpot from "../Components/AllTouristSpot";
-// import SpotDetails from "../Components/SpotDetails";
-// import CountryDetails from "../Pages/CountryDetails";
-// import AddPlace from '../Components/AddPlace'
+
 
 
 
@@ -57,9 +55,17 @@ const routes = createBrowserRouter([
         element: <ManageFoods></ManageFoods>
       },
       {
-        path: '/requestFood',
-        element: <RequestFood></RequestFood>
+        path: '/myRequestFood',
+        element: <MyRequestFood></MyRequestFood>
       },
+      // {
+      //   path: '/myRequestFood',
+      //   element: <PrivetRoutes><MyRequestFood></MyRequestFood></PrivetRoutes>
+      // },
+      // {
+      //   path: '/requestFood',
+      //   element: <PrivetRoutes><Request></Request></PrivetRoutes>
+      // },
       {
         path: '/update/:id',
         element: <Update></Update>,

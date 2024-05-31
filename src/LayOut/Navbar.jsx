@@ -42,7 +42,7 @@ const Navbar = () => {
 
             <li className="font-bold"><NavLink to='/AddFood'>Add Food</NavLink></li>
             <li className="font-bold"><NavLink to='/manageFood'>Manage My Foods</NavLink></li>
-            <li className="font-bold"><NavLink to='/requestFood'>My Request Food</NavLink></li>
+            <li className="font-bold"><NavLink to='/myRequestFood'>My Request Food</NavLink></li>
 
         </>}
     </>

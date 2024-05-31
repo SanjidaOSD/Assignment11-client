@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const FeaturedFoods = ({ food }) => {
-    console.log(food)
+    // console.log(food)
 
 
     // const url = 'http://localhost:5000/food'
