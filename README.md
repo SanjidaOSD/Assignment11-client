@@ -17,6 +17,7 @@
 - AOS Package: Implementing AOS (Animate On Scroll) package for adding smooth animations to elements as they come into view.
 - React Hook Form: Integrating React Hook Form for managing and validating form inputs in a React application.
 - React-elastic-carousel: Utilizing react-elastic-carousel for creating responsive and interactive image carousels.
+- TanStack Query:TanStack Query has built-in support for managing paginated or infinite-loading data, which can be complex to handle manually.
 
 
 ## Features:
