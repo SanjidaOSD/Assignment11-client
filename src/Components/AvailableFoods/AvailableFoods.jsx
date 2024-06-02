@@ -94,28 +94,6 @@ export default AvailableFood;
 
 
 
-// import { useEffect, useState } from "react";
-// import Food from "../Food/Food";
-
-// const AvailableFood = () => {
-//     const [allFoods, setAllFoods] = useState([]);
-//     const [loader, setLoader] = useState(true);
-//     const [sort, setSort] = useState('');
-//     const [search, setSearch] = useState('');
-//     const [currentPage, setCurrentPage] = useState(1);
-
-//     useEffect(() => {
-//         const getData = async () => {
-//             try {
-//                 const response = await fetch(`https://y-ochre-iota.vercel.app/food?sort=${sort}&search=${search}&page=${currentPage}`);
-//                 const data = await response.json();
-//                 setAllFoods(data);
-//                 setLoader(false);
-//             } catch (error) {
-//                 console.error("Error fetching data: ", error);
-//                 setLoader(false);
-//             }
-//         };
 
 //         getData();
 //     }, [sort, search, currentPage]);
