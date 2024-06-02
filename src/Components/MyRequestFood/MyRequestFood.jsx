@@ -3,7 +3,7 @@ import UseAuth from "../../Hook/UseAuth";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-// import Request from "../Request/Request";
+import Request from "../Request/Request";
 
 
 const MyRequestFood = () => {
@@ -16,21 +16,17 @@ const MyRequestFood = () => {
         isError,
         error } = useQuery({
             queryFn: () => getData(),
-            queryKey: ['foods']
+            queryKey: ['foods'],
+            
+
 
         })
     console.log(foods)
 
-    // useEffect(() => {
-    //     getData()
-    // }, [user, requestFood]);
 
     const getData = async () => {
-        const data = await axios(`http://localhost:5000/request?.email=${user?.email}`
+        const {data} = await axios(`https://y-ochre-iota.vercel.app/request/${user.email}`
         );
-
-        // setRequestFood(data)
-        navigate('/availableFood')
 
         return data
 
@@ -42,7 +38,7 @@ const MyRequestFood = () => {
     }
     return (
         <div>
-            {/* <h1>{requestFood.length}</h1> */}
+            <h1>{foods.length}</h1>
             <div>
                 <div className="grid grid-cols-12 bg-orange-500 font-bold border-x mt-12">
                     <div className="flex justify-center items-center col-span-1 border-y  py-2">
@@ -60,18 +56,18 @@ const MyRequestFood = () => {
                     <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
                         <h1>Expire Date</h1>
                     </div>
-                    <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
+                    {/* <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
                         <h1>Actions</h1>
-                    </div>
+                    </div> */}
                 </div>
-                {/* {
-                               requestFood .map((requestFood, idx) =>
-                                    <Request key={requestFood._id}
-                                        manageFood={requestFood}
+                {
+                               foods.map((food, idx) =>
+                                    <Request key={food._id}
+                                        food={food}
                                         idx={idx}
                                         
                                     ></Request>)
-                            } */}
+                            }
 
             </div>
 

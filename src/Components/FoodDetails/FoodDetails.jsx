@@ -59,7 +59,7 @@ const FoodDetails = () => {
         };
 
         try {
-            const { data } = await axios.post(`http://localhost:5000/request`, requestData)
+            const { data } = await axios.post(`https://y-ochre-iota.vercel.app/request`, requestData)
             console.log(data)
         } catch (err) {
             console.log(err)

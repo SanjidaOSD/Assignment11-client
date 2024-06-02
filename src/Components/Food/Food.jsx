@@ -6,18 +6,18 @@ const Food = ({ foods }) => {
     // console.log(foods);
 
     // Destructure the necessary properties from the foods object
+    const {newFood , _id} = foods || {}
+    
     const {
-        newFood: {
             foodImg,
             foodName,
             foodStatus,
             additionalNotes,
             foodQuantity,
             expiredDate,
-            donar: { userImage, name },
-        },
-        _id,
-    } = foods || {};
+            donar,
+        } = newFood || {};
+        const  { name,userImage} = donar || {}
 
     return (
         <div className="">
@@ -31,7 +31,7 @@ const Food = ({ foods }) => {
                     <div>
                         <h1 className="lg:text-xl text-2xl font-bold font-lato text-orange-600">{foodName}</h1>
                         <p className="font-bold text-green-700 mb-2">{foodStatus}</p>
-                        <p title={additionalNotes} className="lg:text-sm font-lato mb-2">{additionalNotes.substring(0,50)}...</p>
+                        <p title={additionalNotes} className="lg:text-sm font-lato mb-2">{additionalNotes}</p>
                         <div className="flex gap-2 text-sm text-green-800 mb-2">
                             <p>Quantity: {foodQuantity}</p>
                             <p>Expire Date: {expiredDate}</p>

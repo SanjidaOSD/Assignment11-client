@@ -13,7 +13,7 @@ const AvailableFood = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/food?sort=${sort}&search=${search}`);
+                const response = await fetch(`https://y-ochre-iota.vercel.app/food?sort=${sort}&search=${search}`);
                 const data = await response.json();
                 setAllFoods(data);
                 setLoader(false);
@@ -108,7 +108,7 @@ export default AvailableFood;
 //     useEffect(() => {
 //         const getData = async () => {
 //             try {
-//                 const response = await fetch(`http://localhost:5000/food?sort=${sort}&search=${search}&page=${currentPage}`);
+//                 const response = await fetch(`https://y-ochre-iota.vercel.app/food?sort=${sort}&search=${search}&page=${currentPage}`);
 //                 const data = await response.json();
 //                 setAllFoods(data);
 //                 setLoader(false);

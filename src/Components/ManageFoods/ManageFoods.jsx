@@ -14,7 +14,7 @@ const ManageFoods = () => {
 
 
     const Manages = async () => {
-        await fetch(`http://localhost:5000/food?email=${user?.email}`)
+        await fetch(`https://y-ochre-iota.vercel.app/food?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setManageFoods(data);

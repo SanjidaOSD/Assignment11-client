@@ -1,21 +1,21 @@
-import {  useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import UseAuth from "../../Hook/UseAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 
 const Update = () => {
-    const {user} = UseAuth();
+    const { user } = UseAuth();
     const navigate = useNavigate();
-    const [updateCount , setUpDateCount] = useState()
+    const [updateCount, setUpDateCount] = useState()
 
 
-const food = useLoaderData()
-const { _id, newFood } = food || {};
-const { foodImg,
-    foodName,
-    pickupLocation,
-    expiredDate } = newFood || {};
+    const food = useLoaderData()
+    const { _id, newFood } = food || {};
+    const { foodImg,
+        foodName,
+        pickupLocation,
+        expiredDate } = newFood || {};
 
 
     const handleUpdateFood = async (event) => {
@@ -28,38 +28,38 @@ const { foodImg,
         const foodImg = form.foodImg.value;
 
         const newFood = {
-            
+
             foodName,
             pickupLocation,
             expiredDate,
             foodImg,
             donar: {
-                
+
                 name: user?.displayName,
                 userImage: user?.photoURL,
             },
         };
-     
-          try{
-            axios.put(`http://localhost:5000/food/${_id}`, {
-            newFood
 
-        })
+        try {
+            axios.put(`https://y-ochre-iota.vercel.app/food/${_id}`, {
+                newFood
+
+            })
             Swal.fire({
                 title: "Good job!",
                 text: "Updated successfully!",
                 icon: "success"
-              });
+            });
 
-              navigate('/manageFood')
+            navigate('/manageFood')
 
-              setUpDateCount(!updateCount)
+            setUpDateCount(!updateCount)
 
-          }
+        }
 
-        catch(err){
+        catch (err) {
             console.log(err)
-            }   
+        }
     };
 
     return (
@@ -71,9 +71,9 @@ const { foodImg,
                     </div>
                     <div className="card shrink-0 w-full shadow-2xl bg-green-100">
                         <form onSubmit={handleUpdateFood} className="card-body">
-                         
+
                             <div className="md:flex md:gap-6">
-                            <div className="form-control md:w-1/2">
+                                <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text font-bold">Food Image</span>
                                     </label>
@@ -101,7 +101,7 @@ const { foodImg,
                                     <input type="text" name="pickupLocation" defaultValue={pickupLocation} placeholder="Enter Pickup Location" className="input input-bordered" required />
                                 </div>
                             </div>
-                            
+
                             <div className="form-control mt-6">
                                 <button className="btn btn-ghost bg-orange-500 text-white">Update</button>
                             </div>
@@ -111,7 +111,7 @@ const { foodImg,
             </div>
         </div>
 
-        
+
     );
 };
 

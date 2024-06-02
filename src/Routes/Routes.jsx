@@ -38,7 +38,7 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/food')
+        loader: () => fetch('https://y-ochre-iota.vercel.app/food')
 
       },
 
@@ -69,12 +69,12 @@ const routes = createBrowserRouter([
       {
         path: '/update/:id',
         element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+        loader: ({params}) => fetch(`https://y-ochre-iota.vercel.app/food/${params.id}`)
       },
       {
         path: '/details/:id',
         element: <PrivetRoutes><FoodDetails></FoodDetails></PrivetRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+        loader: ({params}) => fetch(`https://y-ochre-iota.vercel.app/food/${params.id}`)
       },
 
       {

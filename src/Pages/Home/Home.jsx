@@ -80,27 +80,6 @@ function Home() {
             </div>
 
 
-
-
-
-            {/* <div>
-                <div className='mt-24 mb-16'>
-                    <h3 className='text-center text-5xl font-bold '>Go Exotic Places</h3>
-                    <p className='text-center text-xl'>When it comes to exploring exotic places, the choices are numbers. <br /> Whether you like peacefull destinations or vibrant landscapes, <br />we have offers for you.</p>
-
-                </div>
-                <div>
-                    <Country></Country>
-                </div>
-
-            </div> */}
-            {/* <div className='mt-28'>
-                <AboutUs></AboutUs>
-            </div>
-            <hr />
-            <div className='mt-44 mb-16'>
-                <ChooseTour></ChooseTour>
-            </div> */}
         </>
     )
 }

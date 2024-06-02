@@ -44,7 +44,7 @@ const AddFood = () => {
 
         
           try{
-            axios.post('http://localhost:5000/food', {
+            axios.post('https://y-ochre-iota.vercel.app/food', {
             newFood
 
         })

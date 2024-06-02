@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Request = ({requestFood, idx}) => {
-    const { _id, newFood } = requestFood || {};
+const Request = ({food, idx}) => {
+    console.log(food)
+    const { _id, newFood } = food || {};
     const { foodImg, foodName, pickupLocation, expiredDate } = newFood || {};
 
 

@@ -7,31 +7,21 @@ import { Link } from 'react-router-dom';
 
 
 const FeaturedFoods = ({ food }) => {
-    // console.log(food)
 
 
-    // const url = 'http://localhost:5000/food'
-
-    // useEffect(() => {
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setAllFoods(data);
-    //             // setLoader(false);
-    //         })
-    // }, []);
+    const {newFood , _id} = food || {}
+    
     const {
-        newFood: {
             foodImg,
             foodName,
             foodStatus,
             additionalNotes,
             foodQuantity,
             expiredDate,
-            donar: { userImage, name },
-        },
-        _id,
-    } = food;
+            donar,
+        } = newFood || {};
+        const  { name,userImage} = donar || {}
+
     return (
         <div>
             <div className="">
