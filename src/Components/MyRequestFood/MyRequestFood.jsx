@@ -56,9 +56,7 @@ const MyRequestFood = () => {
                     <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
                         <h1>Expire Date</h1>
                     </div>
-                    {/* <div className="col-span-3 flex justify-center items-center border-y border-s py-2">
-                        <h1>Actions</h1>
-                    </div> */}
+                   
                 </div>
                 {
                                foods.map((food, idx) =>

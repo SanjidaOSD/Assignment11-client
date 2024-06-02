@@ -31,7 +31,6 @@ const AvailableFood = () => {
         const text = e.target.search.value;
         setSearch(text);
         setCurrentPage(1);
-       // Reset to first page when searching
     };
 
     return (
